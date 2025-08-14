@@ -34,14 +34,6 @@ public class AWSConfig {
 
     /*s to create, configure, and register an Amazon S3 client in your Spring Boot application so that
      you can interact with AWS S3 without manually creating the client every time.*/
-//    public S3Client s3Client()
-//    {
-//        System.out.println("Using AWS region: " + region); // ✅ Debug log
-//        return S3Client.builder()
-//        .region(Region.of(region))
-//                .credentialsProvider((StaticCredentialsProvider.create( AwsBasicCredentials.create(accessKey,secretKey))))
-//                .build();
-//    }
     @Bean
     public S3Client s3Client() {
         String finalRegion = (region != null && !region.isBlank()) ? region : "eu-north-1";
